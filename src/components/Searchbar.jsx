@@ -17,17 +17,16 @@ const Searchbar = () => {
         navigate('/feed')
     }
     return (
-        <Box sx={{
-            textAlign: 'center',
-        }}>
-            <form
-                onSubmit={onSubmitHandler}
-                style={{ padding: '12px' }}
-            >
-                <input style={{ width: '260px', height: '27px', fontSize: '15px' }} onChange={(e) => setInputData(e.target.value)} value={inputData} />
-                <br /><Button style={{ fontWeight: 'bold' }} variant='filled' type='submit'>Search</Button>
+        <Box sx={{ margin: '12px' }}>
+            <form onSubmit={onSubmitHandler} style={{ display: 'flex', }}>
+                <input onChange={(e) => setInputData(e.target.value)} value={inputData} style={{
+                    width: '260px',
+                    fontSize: '17px',
+                    border: '2px solid black'
+                }} />
+                <Button style={{ fontWeight: 'bold', color: 'black', border: '2px solid black' }} type='submit'>Search</Button>
             </form>
-            <p> Search set to : {inputs}</p>
+            <p style={{ marginBottom: '0px' }}> Search set to : {inputs}</p>
         </Box>
     )
 }

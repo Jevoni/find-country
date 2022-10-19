@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import ReactDom from 'react-dom'
-import { minHeight } from '@mui/system'
 
 const MODAL_STYLES = {
     position: 'fixed',
