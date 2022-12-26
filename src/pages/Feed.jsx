@@ -8,6 +8,8 @@ import CountryCard from '../components/CountryCard'
 import Header from '../components/Header';
 import Modal from '../components/Modal'
 
+import styles from './styles/Feed.module.css'
+
 const Feed = () => {
     const searchType = useSelector(selectedSearchType)
     const search = useSelector(selectedSearch)
@@ -25,12 +27,12 @@ const Feed = () => {
     }, [search, searchType])
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', }}>
+        <Box className={styles.page}>
             <Modal open={isOpen} onClose={() => setIsOpen(false)} country={modalInfo} />
             <Header />
             {countryArr.length ?
                 (
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', width: '100%' }}>
+                    <Box className={styles['countries-container']}>
                         {countryArr.map((country) => (
                             <CountryCard country={country} key={uuid.v4()} setModal={setModalInfo} setIsOpen={setIsOpen} />
                         ))}

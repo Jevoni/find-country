@@ -1,0 +1,51 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 85%;
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    color: white;
+    text-align: center;
+}
+
+.modal h4 {
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.main-container {
+    display: flex;
+}
+
+.data-container {
+    width: 50%
+}
+
+.data-container p span {
+    font-weight: bold;
+}
+
+.data-container button {
+    height: 30px;
+    font-weight: bold;
+}
+
+.flag-container {
+    width: 50%;
+}
+
+.flag-container img {
+    height: 250px;
+    width: 500px;
+}

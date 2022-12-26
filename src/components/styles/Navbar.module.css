@@ -1,0 +1,18 @@
+.navbar-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.navbar-container button {
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+    border: 1px solid black;
+    margin: 3px;
+    background-color: #FDB44E;
+}
+
+.navbar-container button:hover {
+    background-color: #de9d43;
+}

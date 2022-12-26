@@ -4,17 +4,20 @@ import { Box, Typography } from '@mui/material'
 import Navbar from './Navbar'
 import Searchbar from './Searchbar'
 
+import styles from './styles/Header.module.css'
+
 const Header = () => {
     return (
-        <Box sx={{ width: '100%' }}>
-            <Box sx={{
-                display: 'flex',
-                alignItems: { xs: 'center', md: 'initial' },
-                justifyContent: 'space-between',
-                flexDirection: { xs: 'column', md: 'row' }
-            }}>
-                <a style={{ textDecoration: 'none', color: 'black' }} href='/'>
-                    <Typography variant='h2' sx={{ fontSize: { sx: '40px', md: '55px' } }}>Find Country</Typography>
+        <Box className={styles['header-container']}>
+            <Box className={styles['main-container']}
+                sx={{
+                    alignItems: { xs: 'center', md: 'initial' },
+                    flexDirection: { xs: 'column', md: 'row' }
+                }}>
+                <a href='/'>
+                    <Typography variant='h2' sx={{ fontSize: { xs: '35px', md: '40px' }, fontWeight: 'bold' }}>
+                        Find <span>Country</span>
+                    </Typography>
                 </a>
                 <Searchbar />
             </Box>

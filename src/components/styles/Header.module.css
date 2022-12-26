@@ -1,0 +1,22 @@
+.header-container {
+    width: 100%;
+    background-color: #74b9ff;
+    border-bottom: 1.5px solid black;
+    margin-bottom: 5px;
+    padding: 7px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-container a h2 span {
+    color: #FDB44E;
+    text-shadow: 1.3px 1.3px black;
+}

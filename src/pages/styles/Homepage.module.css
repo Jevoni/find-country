@@ -1,0 +1,24 @@
+.page {
+    background-color: #74b9ff;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 82%;
+}
+
+.main-container h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.main-container span {
+    color: #FDB44E;
+    text-shadow: 1.3px 1.3px black;
+}

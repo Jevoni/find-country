@@ -4,6 +4,8 @@ import { selectedSearchType, setSearch } from '../services/searchSlice'
 import { Box, Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
+import styles from './styles/Searchbar.module.css'
+
 const Searchbar = () => {
     const inputs = useSelector(selectedSearchType)
     const [inputData, setInputData] = useState('')
@@ -17,16 +19,12 @@ const Searchbar = () => {
         navigate('/feed')
     }
     return (
-        <Box sx={{ margin: '12px' }}>
-            <form onSubmit={onSubmitHandler} style={{ display: 'flex', }}>
-                <input onChange={(e) => setInputData(e.target.value)} value={inputData} style={{
-                    width: '260px',
-                    fontSize: '17px',
-                    border: '2px solid black'
-                }} />
-                <Button style={{ fontWeight: 'bold', color: 'black', border: '2px solid black' }} type='submit'>Search</Button>
+        <Box className={styles['main-container']}>
+            <form onSubmit={onSubmitHandler}>
+                <input onChange={(e) => setInputData(e.target.value)} value={inputData} />
+                <Button type='submit'>Search</Button>
             </form>
-            <p style={{ marginBottom: '0px' }}> Search set to : {inputs}</p>
+            <p> Search set to : {inputs}</p>
         </Box>
     )
 }

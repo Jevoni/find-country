@@ -1,0 +1,11 @@
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.countries-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 14px;
+}
